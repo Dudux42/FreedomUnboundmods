@@ -64,11 +64,11 @@
     {
       "id": "fu-retextured",
       "name": "FU retextured",
-      "version": "0.8.1",
-      "file": "FU-retextured-0.8.1.zip",
-      "bytes": 384018406,
-      "sha256": "6ecabb64558efb30757555688bb93f1c3b09261eab0bf8e0e2435f2a1e6e6920",
-      "url": "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-16/FU-retextured-0.8.1.zip",
+      "version": "0.9.1",
+      "file": "FU-retextured-0.9.1.zip",
+      "bytes": 466663115,
+      "sha256": "a8eeb63534a45d8b67cb7454bb2059cb7cff84e6d7ff774a33b1f8a79bfe5a89",
+      "url": "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-16/FU-retextured-0.9.1.zip",
       "guide": "guides/fu-retextured.md"
     },
     {

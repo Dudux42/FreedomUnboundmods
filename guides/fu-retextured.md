@@ -1,37 +1,43 @@
-# FU retextured 0.8.1
+# FU retextured 0.9.1
 
-Author: DuduX42. Title credit: Made by Team Wyvern Works. USA ULUS10391.
-Drag this ZIP onto the launcher's Mods page, install, then enable it. Do not unzip.
-The stable id fu-retextured updates earlier versions instead of duplicating.
-Manifest type textures supports both the older desktop and newer launchers.
+By **DuduX42** · **Team Wyvern Works** · MHFU USA **ULUS10391**.
 
-Adds 32 authored 8x female armor sheets (512x512, original 64x64): completes
-Leather and Chain, adds Giaprey and Battle blade sets, and Hunter, Giaprey and
-Battle gunner variants. Hunter's Leggings reuse the existing Hunter Greaves sheet.
-All 45 pieces in the surveyed Invoker box are accounted for: 12 previous pieces,
-32 new sheets and one additional piece using an existing sheet. Pages 2-7 were
-empty; weapons on page 8 were left outside this armor pass.
+Download the ZIP from the repository's release page. Drop it onto the launcher's
+Mods page, choose Install, then enable it. Do not extract the ZIP. Enable only
+one texture pack. The stable `fu-retextured` ID updates the existing mod;
+`type: textures` preserves older desktop launcher compatibility.
 
-481 PNGs / 489 mappings. One additional Bone Shooter hash reuses approved
-weapon art and supports the ranged-weapon survey. Two decoded-identical armor load-order aliases cover Giaprey Cap and Battle Vest.
-All previous content stays:
-448 prior PNGs are byte-identical to 0.7.0; only the title version label changes.
-Material rules retain satin steel, aged leather, original checked cloth, mail,
-fur and bone. Headgear hair stays neutral for tinting; source alpha is exact.
-Original meshes, UVs, animation and geometry remain.
+## New in this release
 
-Each of the 33 additional pieces was checked in five rotated native 6x previews.
-All 32 new armor images and the alias loaded; images uploaded. Actual desktop
-launcher installation and every extracted file were verified in a disposable
-profile. User saves/settings and installed mod selection were not changed.
-Female current appearance and equipment-preview poses are the audited scope;
-male variants, other dyes and all combat animation states were not audited.
+42 authored 8x Snowy Mountains environment sheets: tent canvas, worn paths,
+snow, moss, layered rock, cliffs, tree bark and branches, grasses, small
+gathering props, water, clouds and distant mountain backgrounds. Original
+64px sheets become 512px; 128px sheets become 1024px. Original meshes remain.
 
+This combines the Snowy Mountains 0.9.0 batch with the published 0.8.1 pack:
+480 earlier PNGs are preserved byte-for-byte, all 42 Snowy sheets are preserved,
+and only the title's version-label rectangle changes from 0.8.1. It retains
+the earlier cutout-edge, tiling, sharpness, material and redrawn-logo changes.
+The cumulative pack contains **523 PNGs / 531 mappings**.
 
-## Changelog
+## Included earlier work
 
-### 0.8.1
-- Smooth anti-aliased cut-out edges on 222 textures (hair, armor, player sheets, props); stair-steps removed, original shapes and holes kept.
-- Seam fixes on 9 tiling textures (Pokke terrain-5/terrain-41/snow, Farm rock-grass/water-ripples/water-swirl, Hall floor-stones/packed-earth/timber-wall).
-- Sharpness tweaks on 29 textures and a light material pass on 31.
-- Redrawn HD title logo.
+- House and kitchen surfaces, furniture, bedding, cooking items and background details.
+- Surveyed Pokke Village, Farm and Gathering Hall environments.
+- Title/logo, main-menu and submenu artwork, save/character-creation UI and font fixes.
+- Player faces, eyes, hairstyles, skin and starting clothes; original tint behavior retained.
+- Female Hunter set and Twin Dagger; surveyed item-box equipment and female
+  Leather, Chain, Giaprey, Battle and selected gunner armor variants.
+
+## Validation and coverage
+
+The merged pack was rerun at 6x internal rendering in an isolated copied profile.
+All 42 new texture keys were observed. The actual desktop launcher installed
+the ZIP and every extracted file was checked against it. Saves remained unchanged.
+
+Coverage is the captured base camp, Zone 1 and lower Zone 2 route and rotations;
+it does not claim every viewpoint, quest or weather variant. Zones 3–8 await
+additional dumps. Four masks/shared sheets remain original deliberately:
+water foam, reflection modulation, fog modulation and a broad shared prop atlas.
+Monsters and the complete HUD are not newly retextured by this batch. Previous
+equipment work does not cover all sets, male variants, dyes or animation states.

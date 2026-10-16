@@ -26,7 +26,7 @@ Each mod has a guide with more details if you need them.
 | [Modern Right-Stick Camera](#modern-camera) | 0.2.0 | [ZIP](https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-16/modern-camera-0.2.0.zip) | [Guide](guides/modern-camera.md) |
 | [Shared Gathering Hall Progression](#shared-guild-progression) | 0.1.0 | [ZIP](https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-16/shared-guild-progression-0.1.0.zip) | [Guide](guides/shared-guild-progression.md) |
 | [Flag Key Quests](#key-quests) | 0.1.0 | [ZIP](https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-16/key-quests-0.1.0.zip) | [Guide](guides/key-quests.md) |
-| [FU Retextured](#fu-retextured) | 0.8.1 | [ZIP](https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-16/FU-retextured-0.8.1.zip) | [Guide](guides/fu-retextured.md) |
+| [FU Retextured](#fu-retextured) | 0.9.1 | [ZIP](https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-16/FU-retextured-0.9.1.zip) | [Guide](guides/fu-retextured.md) |
 | [Quest Return Timer](#return-timer) | 0.1.0 | [ZIP](https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-16/return-timer-0.1.0.zip) | [Guide](guides/return-timer.md) |
 | [Buff Icons](#buff-icons) | 0.1.0 | [ZIP](https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-16/buff-icons-0.1.0.zip) | [Guide](guides/buff-icons.md) |
 | [Equipment Material Pin](#equipment-wishlist) | 0.1.2 | [ZIP](https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-16/equipment-wishlist-0.1.2.zip) | [Guide](guides/equipment-wishlist.md) |
@@ -110,6 +110,10 @@ it easier to see which quests you need to complete to progress.
 Gives the game a visual upgrade with sharper environments, menus, fonts, hunter
 and equipment textures. This is a work in progress, with more of the game being
 improved over time. Enable it as your texture pack in the Mods menu.
+
+Version **0.9.1** adds 42 authored 8x Snowy Mountains textures for camp and
+Zones 1–2, preserving the earlier 0.8.1 improvements.
+[Coverage and installation details](guides/fu-retextured.md).
 
 **Planned updates**
 
