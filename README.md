@@ -54,8 +54,8 @@ You still need pickaxes or bug nets where required.
 
 **Planned updates**
 
-- Show which items can be found at each gathering spot.
-- Add monster carving to the list, including the items you can carve.
+- Add specific icons for each type of gathering spot.
+- Add an icon for monster carving.
 
 <a id="monster-hp"></a>
 
@@ -64,6 +64,10 @@ You still need pickaxes or bug nets where required.
 Shows the names and health bars of large monsters in your current area, stacked
 at the bottom-left of the screen. The bars appear as soon as you enter their area
 and disappear when you leave it or reach the reward screen.
+
+**Planned updates**
+
+- Add a smooth animation to the health bars.
 
 <a id="modern-camera"></a>
 
@@ -79,6 +83,7 @@ appears in its health bar; otherwise, the icon appears beside the monster's name
 **Planned updates**
 
 - Improve the overall camera controls.
+- Make camera movement as smooth as possible.
 - Improve the camera for ranged combat and special camera situations.
 
 <a id="shared-guild-progression"></a>
@@ -109,7 +114,7 @@ improved over time. Enable it as your texture pack in the Mods menu.
 **Planned updates**
 
 - Improve the entire game: all male and female armor sets, all weapons, every map,
-  NPCs, Felynes, icons and the HUD.
+  monsters, NPCs, Felynes, icons and the HUD.
 
 <a id="return-timer"></a>
 
