@@ -1,43 +1,53 @@
-# FU retextured 0.9.1
+# Freedom Unbound HD
 
-By **DuduX42** · **Team Wyvern Works** · MHFU USA **ULUS10391**.
+Version 0.14.0. Author: **DuduX42**.
 
-Download the ZIP from the repository's release page. Drop it onto the launcher's
-Mods page, choose Install, then enable it. Do not extract the ZIP. Enable only
-one texture pack. The stable `fu-retextured` ID updates the existing mod;
-`type: textures` preserves older desktop launcher compatibility.
+Install the mod ZIP from the launcher's Mods page and enable it. Use the updated
+native launcher for its built-in F10 control.
 
-## New in this release
+During gameplay, press **F10** to switch between HD textures and the game's
+original textures. Press it again to restore HD textures. Your installed pack
+and its files stay in place, and your choice is saved for the next launch.
+Holding the key does not repeat the toggle. This shortcut is available during
+gameplay, outside launcher menus and dialogs; it has no separate F9 setting.
 
-42 authored 8x Snowy Mountains environment sheets: tent canvas, worn paths,
-snow, moss, layered rock, cliffs, tree bark and branches, grasses, small
-gathering props, water, clouds and distant mountain backgrounds. Original
-64px sheets become 512px; 128px sheets become 1024px. Original meshes remain.
+This pack's official name is **Freedom Unbound HD**. Its internal ID remains
+`fu-retextured`, so existing installations update in place.
 
-This combines the Snowy Mountains 0.9.0 batch with the published 0.8.1 pack:
-480 earlier PNGs are preserved byte-for-byte, all 42 Snowy sheets are preserved,
-and only the title's version-label rectangle changes from 0.8.1. It retains
-the earlier cutout-edge, tiling, sharpness, material and redrawn-logo changes.
-The cumulative pack contains **523 PNGs / 531 mappings**.
+**0.14.0** restores the item and equipment icon atlases from the original game sheets with source-faithful 8x upscales; no Vector Icons artwork is included. It adds the pair 16 cloth atlas retexture.
 
-## Included earlier work
+**0.13.3** adds the approved HD loading-map retexture, original-art 8x body
+and heading fonts, and the approved language-background upscale. The existing
+HD main-menu background and all item/equipment icons are retained. Original
+loading lettering is preserved. Package/atlas checks passed; native review pending.
 
-- House and kitchen surfaces, furniture, bedding, cooking items and background details.
-- Surveyed Pokke Village, Farm and Gathering Hall environments.
-- Title/logo, main-menu and submenu artwork, save/character-creation UI and font fixes.
-- Player faces, eyes, hairstyles, skin and starting clothes; original tint behavior retained.
-- Female Hunter set and Twin Dagger; surveyed item-box equipment and female
-  Leather, Chain, Giaprey, Battle and selected gunner armor variants.
+**0.13.2** replaces all five armor-slot and eleven weapon-class equipment icons
+with the approved artwork from the supplied icon archive, matching the item icons.
+The 0.13.1 item icons and all pixels outside these 16 cells are preserved.
+Atlas and package checks passed; in-game equipment-menu review remains pending.
 
-## Validation and coverage
+**0.13.1** replaces the generated item icons with the supplied classic-style
+icon artwork and the approved traced Dark Stone icon. Both icon sizes are
+included. Atlas and package checks cover all 92 cells; populated native-menu
+validation remains outstanding. Equipment icons and other textures are retained.
 
-The merged pack was rerun at 6x internal rendering in an isolated copied profile.
-All 42 new texture keys were observed. The actual desktop launcher installed
-the ZIP and every extracted file was checked against it. Saves remained unchanged.
+**0.13.0** adds 46 item icon families in both large and compact forms (92
+cells), at 8x replacement scale. Item colors still come from the game. The
+shared sheets retain the previous equipment icons and hunting HUD work;
+an equipment-icon redesign is not included. All 92 cells have atlas-level
+checks, but this does not mean every item and menu state was tested in game.
 
-Coverage is the captured base camp, Zone 1 and lower Zone 2 route and rotations;
-it does not claim every viewpoint, quest or weather variant. Zones 3–8 await
-additional dumps. Four masks/shared sheets remain original deliberately:
-water foam, reflection modulation, fog modulation and a broad shared prop atlas.
-Monsters and the complete HUD are not newly retextured by this batch. Previous
-equipment work does not cover all sets, male variants, dyes or animation states.
+**0.12.0** adds the first core hunting HUD pass: health/stamina frames and end
+caps, sharpness sprites and six shared weapon silhouettes. Native bar fills,
+colours and gameplay values remain unchanged. Native 6x checks cover the camp
+HUD and partial stamina drain/recovery; low-health recovery, worn sharpness
+tiers and every weapon-specific state are not yet verified.
+
+**0.11.1** finishes the Mafumofu set on both male worn sheets and box/female
+item-box sheets (hood, jacket, coat, mittens, boots): navy weave detiled,
+fur softened/clumped, trim and leather edges cleaned. **0.11.0** male Leather /
+Light Belt and earlier environment, equipment, character, menu and HUD work
+are retained.
+
+Planned content includes monsters, every male/female armor set, weapons, maps,
+NPCs, felynes, icons and HUD.

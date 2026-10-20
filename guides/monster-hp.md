@@ -1,12 +1,144 @@
-# Monster HP: native launcher mod
+# Monster Health Bars: native launcher mod
 
-Author: DuduX42. Version: 0.2.1 (experimental).
+Modern Camera 0.2.0 can mark its selected monster with a small gold target icon
+inside that monster's HP bar. It handles targeting independently; disabling
+Monster HP switches Modern Camera to its own target icon and monster-name display.
+
+Author: DuduX42. Version: 0.3.0.
 Target: the modified Freedom Unbound Windows build, USA ULUS10391, mod API 1.
+
+## Version 0.3.0
+
+This release uses the official name **Monster Health Bars**,
+keeping the stable `monster-hp` ID. Its implemented F9 options are:
+
+- Bar size: adjust the overall scale.
+- HP display: current/max HP, percentage, or both.
+- Bar color: customize the health fill.
+
+Keep monster names, the bottom-left anchor, stacked current-area large-monster
+bars and the existing target-camera integration. These choices remain as agreed.
+The native launcher built successfully and the release ZIP was verified. No game or runtime tests were run for this release.
+
+Four compact buildup meters now sit below the HP fill: poison, paralysis, sleep
+and stun, each with current buildup / live threshold. Invalid or zero thresholds
+show N/A; this does not claim immunity. Dead monsters do not show status meters.
+The stack scales down if necessary to fit the current-area monsters on screen.
+Settings persist under monster_hp.* in launcher.ini. Defaults keep both HP
+formats and the existing health-dependent colors; editing the fill color enables
+the custom color. Status values are copied on the guest thread with HP, never
+read from guest pointers during UI drawing.
+
+Generic **Part destroyed** notifications appear at middle-left with the monster's
+name. They reuse the existing wishlist notification queue/animation utility:
+five seconds per card, three cards visible, queued overflow. Ordinary hits and
+stagger counters do not trigger them. First sightings baseline already-broken
+actors; unchanged flags do not repeat. Off-area changes are ignored and quest
+transitions clear pending and visible notices. Simultaneous part bits produce
+one Parts destroyed notice.
+
+Native evidence: 09AD7768 consumes pending actor +0776 bits; 09AD8048 commits
+the persistent +0774 mask at 09AD8088 and records the bits in the quest's species
+reward flags at 09AD80A4. 09AD7808 queries committed bits. The reader checks the
+original SH instruction (A6050774) before using the field. Tracking is keyed by
+actor, species, maximum HP and vtable; absent actors are removed. No new hooks
+or guest writes were added.
+
+Part names and a distinct Tail severed label are not mapped. Generic notices
+cover new committed destruction bits, including sever events using this path;
+complete tail/species coverage needs live verification. Species using a separate
+sever path may need a dedicated observer. Stagger/part-break threshold meters
+and active status timers remain unimplemented.
+
+User verification: all F9 controls and
+restart persistence; each buildup meter and repeated status application; area,
+death and reward transitions; multiplayer host/client comparison; readability
+at large bar scales and with several monsters. Added regression fixtures cover
+the four field pairs, changing resistance, invalid readings, death, part-state
+edges, initial baselines and off-area suppression; they have not been executed.
+Verify actual part breaks and tail severs, including species coverage,
+regenerating parts and coexistence with wishlist notifications.
+
+## Pre-implementation feature study - 18 October 2026
+
+At the time of this study no gameplay source, hooks, package or installed mod
+was changed; no build, game or runtime test was run. The existing actor registry, current-area
+filter and quest-transition clearing could be reused. At that point the snapshot
+contained HP, identity, species and area only; no extra readings were implemented.
+
+### Status buildup: strongest implementation candidate
+
+The original PSP overlay's MHFU reader identifies the four pairs below. Static
+inspection of the owner's USA game_task overlay independently found matching
+16-bit field initialization and buildup-versus-threshold comparisons:
+
+| Status | Actor-relative buildup / threshold | Native buildup update |
+|---|---|---|
+| Poison | +0388 / +0450 | 09ACC2B8..09ACC324 |
+| Sleep | +0446 / +0444 | 09ACC224..09ACC258 |
+| Paralysis | +0458 / +0456 | 09ACC35C..09ACC390 |
+| Stun / KO | +0440 / +0566 | 09ACC3E4..09ACC418 |
+
+Threshold initialization is at 09ACC150..09ACC168. This is enough evidence to
+plan read-only buildup/required-value displays, but not to claim live correctness.
+Use each monster's current threshold, not a species-wide constant. Repeated
+applications, buildup decay, immunity/invalid values, resets, death, area changes
+and multiplayer host/client agreement still require user verification after a
+future implementation. A percent would describe buildup progress, not a chance
+of inflicting the status on the next hit.
+
+Primary reference for field names:
+[Original MHFU overlay reader](https://github.com/Alexander-Lancellott/MH-HP-Overlay-For-PSP-Emulator/blob/main/modules/mhfu.py).
+It was read for offset facts only; no third-party implementation was copied or run.
+
+### Active status timers: feasible, mapping incomplete
+
+Buildup and active duration must be separate displays. The native poison path
+sets actor +0522 bit 2 and initializes +0454 from a species data field at
+09ACC310..09ACC320. This supplies a timer/state research lead, not a validated
+seconds countdown. Adjacent status counters are also initialized/reset in the
+same native unit, but their full active-state meanings and tick units have not
+been established here.
+
+Read the game's active state and remaining duration rather than starting a host
+wall-clock stopwatch. Verify the time conversion and early termination before
+displaying seconds. Sleep must clear when the monster actually wakes; paralysis,
+poison and stun must follow their own state transitions. Do not label a resistance
+counter as time remaining. An active icon is a safer interim feature wherever
+the duration is not yet verified.
+
+### Stagger thresholds: additional reverse engineering needed
+
+The existing HP and per-hit damage feeds do not identify each part's stagger
+budget, reset value or reset event. A whole-monster HP-derived meter would be
+misleading. The next bounded research step is the monster hit-response and
+part-damage routines, to identify the actual per-part counters and names. Show
+progress toward a threshold only after that mapping is verified; reaching a
+counter threshold should not be presented as a guaranteed immediate animation.
+
+### Part-break thresholds: highest uncertainty
+
+A stagger counter must not automatically be advertised as a break counter.
+Break/sever flags, part naming and any additional conditions must be mapped for
+the supported species. Verify repeated stagger requirements, damage-type or HP
+conditions where applicable, and already-broken/severed states. A trustworthy
+first implementation should support a verified subset and mark other parts as
+unavailable rather than inventing a universal percentage. No reliable universal
+part-break reader was established by this study.
+
+### Suggested order and presentation
+
+Implement the three agreed F9 options first, then status buildup, then verified
+active timers. Research per-part stagger and break rules separately. Consider
+an optional compact detail section for the targeted monster so multi-monster
+HP bars remain readable; this layout is a suggestion, not an agreed setting.
+All extra data should remain read-only and should reuse the current reset and
+area rules. Multiplayer correctness is unverified, not assumed from HP syncing.
 
 ## Install and behavior
 
-Drop `monster-hp-0.2.1.zip` onto the launcher's Mods page, install it, then
-switch Monster HP on. The desktop shortcut already points to the rebuilt
+Drop `monster-health-bars-0.3.0.zip` onto the launcher's
+Mods page, install it, then switch Monster Health Bars on. The desktop shortcut points to
 `build/windows/bin/FreedomUniteNative.exe`. The ZIP selects native code in
 that build; it cannot add support to an older executable.
 
@@ -29,9 +161,9 @@ without requiring a hit. It stays visible over launcher menus and system
 dialogs while eligible monsters remain in the area. It takes no input focus.
 Position is fixed; the reference's
 external-window dragging/right-click behavior is not implemented. Disable
-through Mods. There are no configurable settings in this version.
+through Mods. F9 options are described above.
 
-The mod reads health only. It does not change gameplay, saves, cheats or
+The mod reads health and status buildup only. It does not change gameplay, saves, cheats or
 PPSSPP settings. Native overlay inclusion in F12 screenshots is not guaranteed.
 
 ## What was in the supplied archive
@@ -70,7 +202,7 @@ remain unchanged.
 `host/monster_hp.cpp` validates aligned actor addresses and guest RAM bounds,
 excludes the local hunter, rejects invalid maxima and current HP above maximum,
 and treats negative signed HP as zero. USA translated routines read these
-fields as signed halfwords, so this implementation accepts maxima 1–32767.
+fields as signed halfwords, so this implementation accepts maxima 1-32767.
 Discovery reads the USA monster manager at `u32[0x09C122B0]`, then its 20
 actor pointers at `manager + 4640 + slot*4`. This layout is verified from the
 spawn-registration store at `0x09AB168C` and its 20-slot loop at `0x09AB16AC`.
@@ -94,14 +226,10 @@ monster coverage still needs live verification.
 
 ## Build, tests and package
 
-Use the configured Visual Studio developer environment and local supported
-game corpus described in `BUILDING.md`:
-
-```powershell
-cmake --build build/windows --target FreedomUniteNative overlay_ovl09A5F300_game_task_36BD79C16BF70197 mhfu_monster_hp_tests --parallel 2
-ctest --test-dir build/windows -R mhfu_monster_hp --output-on-failure
-python scripts/package-monster-hp.py
-```
+The native launcher supplies the compiled provider. The existing packager
+creates the manifest/guide ZIP. The Windows native launcher built successfully
+on 18 October 2026. Archive contents and integrity were verified. Gameplay and
+regression tests were not run; live verification remains with the user.
 
 The package contains `mod.json` and this guide at its root. The manifest
 identifies DuduX42, USA ULUS10391, API 1 and both required native capabilities,

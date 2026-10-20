@@ -1,19 +1,20 @@
-# Modern Right-Stick Camera
+# Camera Unbound
 
-Author: DuduX42. Version: 0.2.0.
+Author: DuduX42. Version: 0.3.0.
 Target: modified Freedom Unbound Windows build, USA ULUS10391, mod API 1.
 
 ## Install and controls
 
-Install `modern-camera-0.2.0.zip` from the launcher's Mods page and enable
-Modern Right-Stick Camera. The package requires the rebuilt native executable;
+Install `camera-unbound-0.3.0.zip` from the launcher's Mods page and enable
+Camera Unbound. The package requires the rebuilt native executable;
 the desktop shortcut points to `build/windows/bin/FreedomUniteNative.exe`.
 The ZIP selects compiled native functionality; it contains no game files or DLL.
 
 Use the right stick to orbit around the hunter. Small deflections turn slowly,
 full deflection turns faster, and both axes can move together. Vertical movement
 is continuous within the original quest camera's upper/lower limits. This is a
-hunter-following third-person camera, with the original environment adjustment.
+hunter-following third-person camera. Native wall collision still adjusts camera
+position; its hunter-facing yaw correction no longer fights modern orbit input.
 
 The mod applies only in quest maps, including base camps. Village, gathering
 hall, house, kitchen and all other non-quest areas retain the original camera
@@ -21,21 +22,27 @@ and input mapping. Loading, guest menus and unsupported camera modes suspend
 modern control. Quest reward/save states discard pending movement. Host menu
 input capture clears camera requests. Physical D-pad and L retain their original
 functions and take priority over modern movement on the corresponding axes.
+Automatic native preset changes do not reset the selected vertical angle.
 
 In Controls, keep Right stick on D-pad for original behavior outside quests.
 The driver temporarily routes it as analog camera input only in supported quest
-orbit. Off disables the modern input. Analog camera must be on. Camera speed,
-right-stick deadzone and horizontal/vertical inversion use the existing launcher
-settings; no stored input preferences are rewritten by the mod. Vertical input
-uses half the configured turn speed to make the smaller vertical range usable.
+orbit. Off disables the modern input. Analog camera must be on. F9 > Camera
+Unbound > Options adjusts horizontal and vertical sensitivity independently,
+inverts either axis, sets smoothing strength and turns monster targeting on or
+off. These choices save in launcher.ini. Sensitivity multiplies the existing
+Camera speed, and the existing right-stick dead zone still applies. Vertical
+input keeps its original half-speed baseline before the new sensitivity setting.
 
 Bow/bowgun aiming and special/scripted camera modes retain original PSP controls.
 The modern orbit adapter does not redirect the weapon's aiming direction or
 projectile trajectory. Ranged aim is not yet a proportional modern aim adapter.
-Target-camera controls reserve the extra triggers during quests, including
-temporary aiming/menu/special-camera suspension (those states do not queue snaps).
-PSP L/R (the physical shoulders) retain their original functions. Outside those
-quests, or with Modern Camera disabled, the launcher's trigger profile applies.
+When Monster targeting is on, target-camera controls reserve the extra triggers
+during quests, including temporary aiming/menu/special-camera suspension (those
+states do not queue snaps). Turning Monster targeting off disables target
+selection, target marks, the target name card and both extra-trigger actions;
+free camera control remains available.
+PSP L/R (the physical shoulders) retain their original functions. Extra triggers
+are reserved for host mod actions and do not fall back to PSP L/R.
 
 | Action | Switch Pro | Xbox | PlayStation |
 | --- | --- | --- | --- |
@@ -114,7 +121,7 @@ native difference used for recenter/collision smoothing.
 
 A second hook at `0x08887834` interpolates temporary height, distance and focus
 values before the original trigonometry and environment queries. Five records
-come from the live quest table, with index zero at table+0xA0 and indices 1–4
+come from the live quest table, with index zero at table+0xA0 and indices 1-4
 at table+index*0x20. Elevation is bounded by these records; preset selection,
 area changes and table ownership changes resynchronize from the native camera.
 Shared presets and save data remain unchanged. Unexpected hunter states keep
@@ -129,6 +136,11 @@ ownership it uses the player's original mapping. These framework changes are
 retained in `patches/portablekit-local.patch`.
 
 ## Build and validation
+
+Version 0.3.0 was built on 18 October 2026 and packaged as
+`camera-unbound-0.3.0.zip`. The archive manifest and contents were verified.
+No game or runtime tests were run for this release; the camera settings and
+targeting toggle need in-game verification.
 
 ```powershell
 cmake --build build/windows --target FreedomUniteNative mhfu_modern_camera_tests --parallel 2
@@ -200,3 +212,48 @@ Developer-only `MHFU_TARGET_CAMERA_PREVIEW=1` supplies two labelled sample
 targets in a quest; `MHFU_MONSTER_HP_PREVIEW=1` supplies matching sample HP bars.
 `MHFU_TARGET_CAMERA_TRACE=1` logs selection/cycle/snap events. Normal play and
 the desktop shortcut use none of these preview/trace flags.
+
+## 0.2.1 camera ownership corrections
+
+The original yaw correction at `0x088875E0` can turn toward the hunter after a
+geometry query. The adapter previously added stick motion to that corrected
+angle, allowing the native correction to oppose it. Modern orbit now retains
+its own desired yaw; physical D-pad/L input adopts the native result, while
+automatic corrections cannot replace the chosen orientation. Native collision
+queries, camera-position adjustment and their flags remain intact.
+
+Automatic native vertical-preset changes no longer reset the continuous pitch.
+An explicit physical D-pad preset change still does. Horizontal input no longer
+depends on successful pitch-table interpolation, and repeated/reordered pitch
+keys are handled without disabling the whole adapter. A selected native record
+may differ from its preset index while both still refer to the validated table;
+foreign records and non-quest/aim/menu modes remain excluded.
+
+Regression tests cover repeated geometry-driven yaw changes, simultaneous stick
+motion, idle orientation retention, physical recenter/preset priority, preset
+pointer transitions, pitch-record edge cases, targeting and excluded contexts.
+An additional local probe executes the original USA correction instructions:
+native yaw changes from 12000 to 14000, then the corrected adapter honors the
+requested one-degree turn as approximately 11818 instead of inheriting 14000.
+No original instructions or preset-table data are changed by the mod.
+
+A bounded Windows quest run installed the release package and exercised right,
+left, vertical and diagonal input, idle holds, a wall approach and physical L
+recentering at Snowy Mountains camp (area 98). Screenshots were inspected;
+166 read-only camera samples stayed finite, and 440 applied-request samples
+matched the requested horizontal turn within one native angle unit of rounding.
+Physical L reached the original button mask. Copied saves remained unchanged.
+Evidence is local under `build/windows/modern-camera-correction-021/`.
+
+That camp run did not trigger the native yaw-correction branch naturally; the
+actual-instruction probe covers that specific conflict. Other maps, the player's
+exact reported problem spots, physical controller feel, special/ranged modes
+and multiplayer camera behavior still need playtesting.
+
+The reported location was subsequently narrowed to walls, especially Jungle
+Area 2. The original-instruction regression also passes 180 consecutive
+correction updates: 60 turning right, 60 turning left and 60 idle. Stick motion
+remains within one native angle unit of rounding per update, idle yaw does not
+drift, and the adapter preserves the collision flag produced by the game.
+This is a controlled instruction-level reproduction; Jungle Area 2 itself
+has not yet been verified in a natural gameplay run.

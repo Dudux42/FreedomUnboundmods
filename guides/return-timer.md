@@ -1,11 +1,11 @@
-# Quest Return Timer 0.1.0
+# Return Timer 0.2.0
 
 Author: DuduX42. Game: MHFU USA (`ULUS10391`) in the updated native launcher.
 
 ## Install and behavior
 
-Drop `build/mods/return-timer-0.1.0.zip` onto the launcher's **Mods** page,
-install it and enable **Quest Return Timer**. The desktop shortcut uses the
+Drop `return-timer-0.2.0.zip` onto the launcher's **Mods** page,
+install it and enable **Return Timer**. The desktop shortcut uses the
 rebuilt native executable; the configuration ZIP requires that provider.
 
 A compact top-center panel shows **RETURN IN** and the remaining time as

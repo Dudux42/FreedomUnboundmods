@@ -1,12 +1,18 @@
-# Equipment Material Pin 0.1.2
+# Equipment Wishlist 0.2.0
 
 Author: DuduX42. MHFU USA (`ULUS10391`), updated Freedom Unbound native launcher.
 
 ## Install and controls
 
-Drop `build/mods/releases/equipment-wishlist-0.1.2.zip` onto the launcher **Mods** page,
-install it and enable **Equipment Material Pin**. The rebuilt native launcher
+Drop `build/mods/releases/equipment-wishlist-0.2.0.zip` onto the launcher **Mods** page,
+install it and enable **Equipment Wishlist**. The rebuilt native launcher
 contains its provider; the ZIP carries configuration and this guide.
+
+Press **F7** in a village, quest or gathering hall to open the wishlist window.
+Click a wishlisted item, or focus it and press the controller's configured
+**Confirm** button, to expand its materials. The list shows how many you have,
+how many are required and how many are still missing. Press F7, Esc, controller
+Back or Close to leave the window. F7 is reserved for this panel.
 
 At the smithy, highlight a craftable equipment recipe and its materials:
 
@@ -20,16 +26,16 @@ to use these triggers for its quest target controls outside the smithy.
 The smithy shows the two control hints side-by-side at the bottom-right, below
 the native menu panels, with no enclosing background box. Hints stay visible on
 all smithy recipe detail pages. Pins appear beside wishlisted equipment names
-in the smithy list/details and beside each pinned material
-name. There is no checklist HUD or numerical wishlist overlay. The mod keeps
-required, owned and missing quantities internally, combining the item box and
-24-slot pouch. Armor creation, weapon creation and weapon upgrade recipes are
+in the smithy list/details and beside each pinned material name. The wishlist
+window uses the same owned-material counts as quest readiness, combining the
+item box and 24-slot pouch. Armor creation, weapon creation and weapon upgrade recipes are
 distinct entries; decoration menus are excluded.
 
 Pinning or removing a pin shows a three-second confirmation in the top-left
 margin, above the HUD/menu panels. Rapid changes replace the previous confirmation.
-Successfully crafting or upgrading a pinned recipe automatically removes its pin
-and persists the updated wishlist. Cancelling or failing a craft leaves it pinned.
+Successfully crafting or upgrading a pinned recipe automatically removes its pin,
+persists the updated wishlist and displays **Wishlisted equipment crafted** at the
+middle-left for five seconds. Cancelling or failing a craft leaves it pinned.
 Village readiness reminders wait until the village world is actually rendered
 and loading/fade covers have cleared, then receive their full five-second display.
 
@@ -74,6 +80,11 @@ or target-indexed 28-byte weapon-upgrade material record.
 It copies only the selected requirements into the personal pin file. No game
 recipe tables, executable instructions, fonts or artwork ship in the ZIP.
 Inventory observations and pin/text hooks never write guest memory or saves.
+
+Pressing controller Confirm on a highlighted wishlist item expands or collapses
+its material list. Mouse clicks do the same. Closing the window restores normal
+game input. The F7 panel uses the launcher's interactive in-game panel, so mouse
+and controller actions are captured while it is open.
 
 The native source adapters are in `host/equipment_wishlist.cpp`; checklist and
 notification behavior are in `host/equipment_wishlist_model.cpp`. Drawing and

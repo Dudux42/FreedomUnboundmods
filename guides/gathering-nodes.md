@@ -1,20 +1,23 @@
-# Gathering Nodes: native launcher mod
+# Gathering Unbound: native launcher mod
 
-Author: DuduX42. Version: 0.2.3.
+Author: DuduX42. Version: 0.4.0.
 Target: modified Freedom Unbound Windows build, USA ULUS10391, mod API 1.
 
 ## Install and behavior
 
-Drop `gathering-nodes-0.2.3.zip` onto the launcher's Mods page, install it and
-switch Gathering Nodes on. The desktop shortcut uses the rebuilt native app.
+Drop `gathering-unbound-0.4.0.zip` onto the launcher's Mods page, install it and
+switch Gathering Unbound on. The desktop shortcut uses the rebuilt native app.
 The ZIP selects a compiled provider; it cannot add support to an older build.
 
-A forest-green hexagonal question mark appears above a nearby usable gathering
-spot when the hunter is sheathed. Its color follows the Freedom Unbound emblem.
+A forest-green badge appears above the sheathed hunter near a usable spot:
+pickaxe for mining, bug net for bugs, knife for carving, and question mark for
+regular gathering. Its color follows the Freedom Unbound emblem.
 The red Circle sub-badge is removed. The marker follows the hunter/camera and
 stays clear of the head and centered item-notification band. There is no text
 prompt. It disappears with a drawn weapon, out of range, or at zero remaining
 node uses. For overlapping radii, the closest usable node supplies the icon.
+The knife appears only within carving range of a current-area corpse or tail
+with carves remaining. Carving continues to use the normal game controls.
 
 Hold the PSP Circle action (including its configured keyboard/controller
 binding) to gather, mine or catch bugs repeatedly. Ordinary gathering uses
@@ -28,6 +31,17 @@ sheathing must be released before gathering can resume.
 The original game awards items, consumes tools and decrements remaining uses.
 The mod does not give unlimited items/tools or directly modify save files.
 Disable it from Mods to remove both the indicator and the repeated action.
+
+## F9 options
+
+Open **F9  Gathering Unbound  Options** to toggle mining, bug-catching,
+regular-gathering and carving icons independently. These toggles only hide the
+matching icons; gathering controls and holding Circle keep working as before.
+
+**Icon size** adjusts the badge from 0.75x to 2x its original size. All icon
+types are enabled and size is 1x by default. Changes apply immediately and are
+saved between launches. Weapon-drawn and depleted-node hiding remain unchanged.
+Version 0.4.0 needs the updated native launcher; the ZIP alone cannot upgrade it.
 
 ## Supplied archive and provenance
 
@@ -96,11 +110,8 @@ the established head clearance and item-notification exclusion rectangle.
 
 ## Build and verification
 
-```powershell
-cmake --build build/windows --target FreedomUniteNative mhfu_gathering_nodes_tests --parallel 2
-ctest --test-dir build/windows -R mhfu_gathering --output-on-failure
-python scripts/package-gathering-nodes.py
-```
+The native Windows launcher supplies the compiled provider. The existing
+packager creates and verifies its manifest and guide archive.
 
 The ZIP contains mod.json and this guide. Its manifest requires overlay_draw
 and gathering_nodes plus gathering_repeat, preventing installation into older
@@ -161,3 +172,39 @@ only one harvest, confirming that camera/UI input alone was insufficient.
 This verifies ordinary gathering's full native harvest cycle. Mining, bugs,
 all-map coverage and multiplayer remain playtest limits for this revision;
 their tool selection and interruption guards have regression coverage.
+
+## 0.3.0 icons and carving support
+
+The display now draws original vector pickaxe, net and knife artwork in the
+existing green badge. Carving points come from the native temporary registry
+at u32[0x09A4F1A0]: twenty 32-byte records after its four-byte header. Type 2
+at +20 identifies carving, +24 is the zone, +16 the valid ID, and +18 the
+remaining uses. Positions, radius, vertical range and current hunter zone
+are checked. This format was verified against the owner-provided executable's
+0x0886CC24 insertion and 0x0886CEA8 interaction query. The indicator never
+changes the registry, awards loot, or injects repeated carving input.
+
+Regressions cover carving without static nodes, depletion, wrong area, removed
+records, dropped items, weapon visibility, range and invalid registry pointers.
+Natural corpse and severed-tail encounters still require a hunt playtest.
+
+The Windows native build and three gathering regression targets passed. A
+bounded native run with a copied save and explicitly seeded interaction
+records showed all four icons above the hunter, clear of the item banner.
+Setting the carving record to zero remaining uses removed its knife. These
+were controlled fixtures, not a natural corpse encounter. Copied saves were
+unchanged. Screenshots and results are in
+`build/windows/gathering-unbound-icons-live/`.
+
+## 0.4.0 icon options
+
+Added live F9 controls for mining, bug catching, regular gathering and carving
+icon visibility, plus icon size. Settings reuse the existing launcher.ini
+utility under gathering_nodes.* keys. Invalid sizes use the default; numeric
+sizes are bounded. The stable gathering-nodes mod ID and existing enabled state
+are preserved. No gathering logic or game-memory hooks were changed.
+
+The native launcher build succeeded. No game or runtime tests were run for
+this release. User verification: toggle each icon type near the corresponding
+spot, adjust size, confirm weapon-drawn/depleted hiding and restart to verify
+saved settings.

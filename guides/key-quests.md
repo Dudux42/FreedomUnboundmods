@@ -1,11 +1,11 @@
-# Flag Key Quests 0.1.0
+# Key quest Indicator 0.2.0
 
 Author: DuduX42. Game: MHFU USA (ULUS10391), updated native Freedom Unbound launcher.
 
 ## Install and use
 
-Drop `build/mods/key-quests-0.1.0.zip` onto the launcher's **Mods** page,
-install it and enable **Flag Key Quests**. The desktop shortcut uses the rebuilt
+Drop `key-quest-indicator-0.2.0.zip` onto the launcher's **Mods** page,
+install it and enable **Key quest Indicator**. The desktop shortcut uses the rebuilt
 launcher; older executables do not contain this provider.
 
 A small gold five-point star appears immediately to the left of a key quest's

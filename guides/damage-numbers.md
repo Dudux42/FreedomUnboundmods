@@ -1,13 +1,13 @@
-# Damage Numbers: how this mod was made
+# Just Damage Numbers
 
-Version: 0.2.0 (combat validation pending). Author: DuduX42.
+Version: 0.3.0. Author: DuduX42.
 Target: Freedom Unbound's modified native Windows build, USA ULUS10391,
 mod API 1.
 
 ## Install and use
 
-Drop `damage-numbers-0.2.1.zip` onto the launcher's Mods page, choose Install,
-then switch Damage Numbers on. Launch through the existing Freedom Unbound
+Drop `just-damage-numbers-0.3.0.zip` onto the launcher's Mods page, choose Install,
+then switch Just Damage Numbers on. Launch through the existing Freedom Unbound
 desktop shortcut, which points to `build/windows/bin/FreedomUniteNative.exe`.
 Disable the mod on the Mods page to stop capture and clear its animations.
 It does not change saves or enable cheats.
@@ -16,7 +16,23 @@ The ZIP selects a native implementation already compiled into this modified
 launcher. It contains a manifest and this guide; it does not contain a DLL,
 game files, or executable cheat commands. Older launchers without the
 `damage-numbers` provider cannot use it. Installing this ZIP does not upgrade
-the launcher binary. There are no user-adjustable settings in this version.
+the launcher binary. Version 0.3.0 needs the launcher built with these settings.
+
+## Settings
+
+During gameplay, press **F9**, find **Just Damage Numbers**, then open **Options**.
+
+- **Number size:** 0.75x to 2x the original size.
+- **Color options:** choose separate colors for normal hits, critical hits and
+  negative-affinity hits.
+- **Outline strength:** 0 to 3x the original thin white outline; 0 removes it.
+- **Restore defaults:** return to the original size, light-orange normal and
+  critical hits, red negative-affinity hits and thin white border.
+
+Changes apply immediately and are saved in the launcher's settings. The display
+duration remains unchanged, and critical hits always retain the small `*`.
+Existing installations keep the stable `damage-numbers` ID, so this update
+replaces the old mod rather than adding a second copy.
 
 ## 1. Study the original mod
 
@@ -102,31 +118,22 @@ after a dialog. Capture and rendering do not modify guest gameplay registers.
 
 ## 6. Build and package
 
-Configure the native Windows project as described in `BUILDING.md`, with the
-supported game corpus available locally. Build the application and the
-instrumented overlay from a Visual Studio developer environment:
-
-```powershell
-cmake --build build/windows --target FreedomUniteNative overlay_ovl09C19100_game_sub_662DDC5878706505 --parallel 2
-```
+The release uses the native Windows application and its instrumented game
+overlay, built with the supported game corpus available locally.
 
 Framework changes are retained in `patches/portablekit-local.patch`. The root
 CMake configuration generates the instrumented build copies and includes the
 new host sources. A ZIP alone cannot provide these native hooks.
 
-`scripts/package-damage-numbers.py` creates the manifest and archive using
-Python's standard library. Run from the repository root:
+`scripts/package-damage-numbers.py` creates and verifies the manifest and
+archive using Python's standard library.
 
-```powershell
-python scripts/package-damage-numbers.py
-```
-
-Output: `build/mods/damage-numbers-0.2.1.zip`. The archive has `mod.json` and
+Output: `build/mods/releases/just-damage-numbers-0.3.0.zip`. The archive has `mod.json` and
 `DAMAGE_NUMBERS_MOD_GUIDE.md` at its root, without an enclosing folder.
 The manifest requires both native capabilities, identifies ULUS10391, and
 sets `author` to `DuduX42` and `affects_save` to false.
 
-## Verification and remaining work
+## Earlier validation and remaining work
 
 Version 0.2.0 adds thicker colored glyphs and an eight-direction white outline,
 including the smaller critical star. Labeled normal/critical/negative-affinity
@@ -159,3 +166,16 @@ Slimmed the white outline while preserving bold colored numbers and the critical
 star. Diagonal outline offsets now use the same radius as horizontal/vertical
 offsets. The native launcher rebuilt successfully. This ZIP selects the
 compiled provider and requires the updated native executable.
+
+## Version 0.3.0
+
+Renamed to Just Damage Numbers. Added live F9 options for number size, separate
+normal/critical/negative-affinity colors, white-outline strength and restoring
+defaults. Options use the existing launcher.ini utility under damage_numbers.*
+keys and preserve the mod ID and enabled state. Saved values are validated on
+load; invalid values fall back to defaults and valid numeric values are bounded.
+Bold text, the critical star and the existing 0.9-second animation are retained.
+
+The native launcher build succeeded. No games or runtime tests were launched
+for this release. In-game verification needed: adjust all options through F9,
+confirm normal/critical/negative hits, and restart to check saved settings.
