@@ -1,125 +1,95 @@
 {
-  "release": "mods-2026-10-20",
-  "mods": [
-    {
-      "id": "damage-numbers",
-      "name": "Just Damage Numbers",
-      "version": "0.3.0",
-      "file": "just-damage-numbers-0.3.0.zip",
-      "bytes": 4701,
-      "sha256": "0fe9d398dd397000d74a39d55aee0cf7e6f5fde26fcb614176954d0182ac3968",
-      "url": "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/just-damage-numbers-0.3.0.zip",
-      "guide": "guides/damage-numbers.md"
-    },
-    {
-      "id": "gathering-nodes",
-      "name": "Gathering Unbound",
-      "version": "0.4.0",
-      "file": "gathering-unbound-0.4.0.zip",
-      "bytes": 5829,
-      "sha256": "7c36bd0f5863637a9c306caed4381e385a6f1fd1794ff18319d1692ee4b80f51",
-      "url": "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/gathering-unbound-0.4.0.zip",
-      "guide": "guides/gathering-nodes.md"
-    },
-    {
-      "id": "monster-hp",
-      "name": "Monster Health Bars",
-      "version": "0.3.0",
-      "file": "monster-health-bars-0.3.0.zip",
-      "bytes": 7772,
-      "sha256": "a1debc3ec764ac1d2ddd1a2cc67fb37f198c0f2d45c2db9edb1b166e27e2a82b",
-      "url": "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/monster-health-bars-0.3.0.zip",
-      "guide": "guides/monster-hp.md"
-    },
-    {
-      "id": "modern-camera",
-      "name": "Camera Unbound",
-      "version": "0.3.0",
-      "file": "camera-unbound-0.3.0.zip",
-      "bytes": 7199,
-      "sha256": "7ab7dc9d05bff1363286c7177469d6850b0b758e9cc4e1e7450c06d5dbab9d6a",
-      "url": "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/camera-unbound-0.3.0.zip",
-      "guide": "guides/modern-camera.md"
-    },
-    {
-      "id": "key-quests",
-      "name": "Key Quest Indicator",
-      "version": "0.2.0",
-      "file": "key-quest-indicator-0.2.0.zip",
-      "bytes": 2593,
-      "sha256": "5dd406739b14110536de2039d7a492970ecfe3fa322bd1361095ee3b0dd2c4fa",
-      "url": "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/key-quest-indicator-0.2.0.zip",
-      "guide": "guides/key-quests.md"
-    },
-    {
-      "id": "fu-retextured",
-      "name": "Freedom Unbound HD",
-      "version": "0.14.0",
-      "file": "Freedom-Unbound-HD-0.14.0.zip",
-      "bytes": 490865309,
-      "sha256": "97c646e19c08526cd70d5a5bed9e27fc0a4294516ea14c40c928b667e0121fac",
-      "url": "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/Freedom-Unbound-HD-0.14.0.zip",
-      "guide": "guides/fu-retextured.md"
-    },
-    {
-      "id": "return-timer",
-      "name": "Return Timer",
-      "version": "0.2.0",
-      "file": "return-timer-0.2.0.zip",
-      "bytes": 2318,
-      "sha256": "f6b47889dfee6d54cc25e6dac5607da2ab55b79d1cc7273f9da69b1bdb4ab985",
-      "url": "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/return-timer-0.2.0.zip",
-      "guide": "guides/return-timer.md"
-    },
-    {
-      "id": "equipment-wishlist",
-      "name": "Equipment Wishlist",
-      "version": "0.2.0",
-      "file": "equipment-wishlist-0.2.0.zip",
-      "bytes": 4443,
-      "sha256": "286f992f845c62575ba7f9f1e949c1cd0617bd7cbd3b7885823be9ca696296b3",
-      "url": "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/equipment-wishlist-0.2.0.zip",
-      "guide": "guides/equipment-wishlist.md"
-    },
-    {
-      "id": "controller-prompts",
-      "name": "Controller Prompts",
-      "version": "0.2.0",
-      "file": "controller-prompts-0.2.0.zip",
-      "bytes": 2881,
-      "sha256": "596c6e8fd47832bf13fde51359b731ea67fd7c84139c285b9201efc01093696f",
-      "url": "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/controller-prompts-0.2.0.zip",
-      "guide": "guides/controller-prompts.md"
-    },
-    {
-      "id": "buff-icons",
-      "name": "Buff Icons",
-      "version": "0.1.0",
-      "file": "buff-icons-0.1.0.zip",
-      "bytes": 3215,
-      "sha256": "212dce55940315c7c46a91eb289bdb2f390e60dcf239df1aae54021eee72f620",
-      "url": "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-16/buff-icons-0.1.0.zip",
-      "guide": "guides/buff-icons.md"
-    },
-    {
-      "id": "gathering-map-markers",
-      "name": "Gathering Map Markers",
-      "version": "0.1.0",
-      "file": "gathering-map-markers-0.1.0.zip",
-      "bytes": 1848,
-      "sha256": "80111d90936204b58562e44994ec2e0b2c7ff296291d63a87aa3994b9130a1b4",
-      "url": "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-16/gathering-map-markers-0.1.0.zip",
-      "guide": "guides/gathering-map-markers.md"
-    },
-    {
-      "id": "shared-guild-progression",
-      "name": "Shared Gathering Hall Progression",
-      "version": "0.1.0",
-      "file": "shared-guild-progression-0.1.0.zip",
-      "bytes": 2936,
-      "sha256": "94e5317636ca8b8480a4be68c68830de434b9e4e332f0369c666270ba1ab7ad1",
-      "url": "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-16/shared-guild-progression-0.1.0.zip",
-      "guide": "guides/shared-guild-progression.md"
-    }
-  ]
+    "release":  "mods-2026-10-20",
+    "mods":  [
+                 {
+                     "id":  "damage-numbers",
+                     "name":  "Just Damage Numbers",
+                     "version":  "0.3.0",
+                     "file":  "just-damage-numbers-0.3.0.zip",
+                     "bytes":  4701,
+                     "sha256":  "0fe9d398dd397000d74a39d55aee0cf7e6f5fde26fcb614176954d0182ac3968",
+                     "url":  "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/just-damage-numbers-0.3.0.zip",
+                     "guide":  "guides/damage-numbers.md"
+                 },
+                 {
+                     "id":  "gathering-nodes",
+                     "name":  "Gathering Unbound",
+                     "version":  "0.4.0",
+                     "file":  "gathering-unbound-0.4.0.zip",
+                     "bytes":  5829,
+                     "sha256":  "7c36bd0f5863637a9c306caed4381e385a6f1fd1794ff18319d1692ee4b80f51",
+                     "url":  "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/gathering-unbound-0.4.0.zip",
+                     "guide":  "guides/gathering-nodes.md"
+                 },
+                 {
+                     "id":  "monster-hp",
+                     "name":  "Monster Health Bars",
+                     "version":  "0.3.0",
+                     "file":  "monster-health-bars-0.3.0.zip",
+                     "bytes":  7772,
+                     "sha256":  "a1debc3ec764ac1d2ddd1a2cc67fb37f198c0f2d45c2db9edb1b166e27e2a82b",
+                     "url":  "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/monster-health-bars-0.3.0.zip",
+                     "guide":  "guides/monster-hp.md"
+                 },
+                 {
+                     "id":  "modern-camera",
+                     "name":  "Camera Unbound",
+                     "version":  "0.3.0",
+                     "file":  "camera-unbound-0.3.0.zip",
+                     "bytes":  7199,
+                     "sha256":  "7ab7dc9d05bff1363286c7177469d6850b0b758e9cc4e1e7450c06d5dbab9d6a",
+                     "url":  "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/camera-unbound-0.3.0.zip",
+                     "guide":  "guides/modern-camera.md"
+                 },
+                 {
+                     "id":  "key-quests",
+                     "name":  "Key Quest Indicator",
+                     "version":  "0.2.0",
+                     "file":  "key-quest-indicator-0.2.0.zip",
+                     "bytes":  2593,
+                     "sha256":  "5dd406739b14110536de2039d7a492970ecfe3fa322bd1361095ee3b0dd2c4fa",
+                     "url":  "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/key-quest-indicator-0.2.0.zip",
+                     "guide":  "guides/key-quests.md"
+                 },
+                 {
+                     "id":  "fu-retextured",
+                     "name":  "Freedom Unbound HD",
+                     "version":  "0.14.0",
+                     "file":  "Freedom-Unbound-HD-0.14.0.zip",
+                     "bytes":  490865309,
+                     "sha256":  "97c646e19c08526cd70d5a5bed9e27fc0a4294516ea14c40c928b667e0121fac",
+                     "url":  "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/Freedom-Unbound-HD-0.14.0.zip",
+                     "guide":  "guides/fu-retextured.md"
+                 },
+                 {
+                     "id":  "return-timer",
+                     "name":  "Return Timer",
+                     "version":  "0.2.0",
+                     "file":  "return-timer-0.2.0.zip",
+                     "bytes":  2318,
+                     "sha256":  "f6b47889dfee6d54cc25e6dac5607da2ab55b79d1cc7273f9da69b1bdb4ab985",
+                     "url":  "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/return-timer-0.2.0.zip",
+                     "guide":  "guides/return-timer.md"
+                 },
+                 {
+                     "id":  "equipment-wishlist",
+                     "name":  "Equipment Wishlist",
+                     "version":  "0.2.0",
+                     "file":  "equipment-wishlist-0.2.0.zip",
+                     "bytes":  4443,
+                     "sha256":  "286f992f845c62575ba7f9f1e949c1cd0617bd7cbd3b7885823be9ca696296b3",
+                     "url":  "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/equipment-wishlist-0.2.0.zip",
+                     "guide":  "guides/equipment-wishlist.md"
+                 },
+                 {
+                     "id":  "controller-prompts",
+                     "name":  "Controller Prompts",
+                     "version":  "0.2.0",
+                     "file":  "controller-prompts-0.2.0.zip",
+                     "bytes":  2881,
+                     "sha256":  "596c6e8fd47832bf13fde51359b731ea67fd7c84139c285b9201efc01093696f",
+                     "url":  "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/controller-prompts-0.2.0.zip",
+                     "guide":  "guides/controller-prompts.md"
+                 }
+             ]
 }

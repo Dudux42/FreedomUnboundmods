@@ -30,9 +30,6 @@ Each mod has a guide with more details if you need them.
 | [Return Timer](#return-timer) | 0.2.0 | [ZIP](https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/return-timer-0.2.0.zip) | [Guide](guides/return-timer.md) |
 | [Equipment Wishlist](#equipment-wishlist) | 0.2.0 | [ZIP](https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/equipment-wishlist-0.2.0.zip) | [Guide](guides/equipment-wishlist.md) |
 | [Controller Prompts](#controller-prompts) | 0.2.0 | [ZIP](https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/controller-prompts-0.2.0.zip) | [Guide](guides/controller-prompts.md) |
-| [Buff Icons](#buff-icons) | 0.1.0 | [ZIP](https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-16/buff-icons-0.1.0.zip) | [Guide](guides/buff-icons.md) |
-| [Gathering Map Markers](#gathering-map-markers) | 0.1.0 | [ZIP](https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-16/gathering-map-markers-0.1.0.zip) | [Guide](guides/gathering-map-markers.md) |
-| [Shared Gathering Hall Progression](#shared-guild-progression) | 0.1.0 | [ZIP](https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-16/shared-guild-progression-0.1.0.zip) | [Guide](guides/shared-guild-progression.md) |
 
 ## What each mod does
 
@@ -162,40 +159,6 @@ images still show the original PSP buttons.
 
 - Better button icons overall.
 
-<a id="buff-icons"></a>
-
-### Buff Icons
-
-Shows small icons beside your sharpness gauge for active timed item and Hunting
-Horn buffs. Icons pulse when 30 seconds remain, then pulse and flash red at ten
-seconds. When a buff ends, its icon disappears and the others move over.
-
-The current icons are placeholders. An update with new icons is coming.
-
-**Planned updates**
-
-- Show the buff icons everywhere they should appear.
-- Make the timing of each buff clearer.
-
-<a id="gathering-map-markers"></a>
-
-### Gathering Map Markers
-
-Shows gathering, mining and bug-catching spots on the map in your current area.
-Used-up spots disappear. You can use it on its own or together with Gathering Unbound.
-
-An update with new icons is coming.
-
-<a id="shared-guild-progression"></a>
-
-### Shared Gathering Hall Progression
-
-Complete Gathering Hall urgent quests together and let everyone earn completion
-credit, even when they did not post the quest. Everyone who wants shared credit
-must enable the mod. You still need to meet the usual rank and quest requirements.
-
-This changes saved quest progress. Full multiplayer progression still needs testing.
-
 ## Controls and combinations
 
 | Mod action | Switch | Xbox | PlayStation | Keyboard default |
@@ -214,7 +177,6 @@ the keyboard shortcuts in **Controls**. L/R shoulder buttons keep their usual fu
 - **Camera Unbound** integrates with **Monster Health Bars**, but also displays targets alone.
 - **Controller Prompts** improves the displayed bindings for both Camera Unbound and
   Equipment Wishlist; their actions also work without it.
-- **Gathering Map Markers** and **Gathering Unbound** can be used together or separately.
 
 ## More information
 
