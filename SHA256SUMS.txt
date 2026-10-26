@@ -3,10 +3,10 @@
 a1debc3ec764ac1d2ddd1a2cc67fb37f198c0f2d45c2db9edb1b166e27e2a82b  monster-health-bars-0.3.0.zip
 7ab7dc9d05bff1363286c7177469d6850b0b758e9cc4e1e7450c06d5dbab9d6a  camera-unbound-0.3.0.zip
 5dd406739b14110536de2039d7a492970ecfe3fa322bd1361095ee3b0dd2c4fa  key-quest-indicator-0.2.0.zip
-97c646e19c08526cd70d5a5bed9e27fc0a4294516ea14c40c928b667e0121fac  Freedom-Unbound-HD-0.14.0.zip
-f6b47889dfee6d54cc25e6dac5607da2ab55b79d1cc7273f9da69b1bdb4ab985  return-timer-0.2.0.zip
+3cc3d0c017a182ab724215e614c86982d14cba54eae99f297eec948d7b42ac32  Freedom-Unbound-HD-0.14.1.zip
+b351be794a5fc588b832dbde53f10b86003082f50de0fafa1564f0790c6b287f  return-timer-0.3.0.zip
 286f992f845c62575ba7f9f1e949c1cd0617bd7cbd3b7885823be9ca696296b3  equipment-wishlist-0.2.0.zip
-596c6e8fd47832bf13fde51359b731ea67fd7c84139c285b9201efc01093696f  controller-prompts-0.2.0.zip
+828a69a5ba3e67cbb8c5d5c2c216822ac9aadf4c977811bef979099c47c19976  adaptive-button-prompts-0.4.0.zip
 212dce55940315c7c46a91eb289bdb2f390e60dcf239df1aae54021eee72f620  buff-icons-0.1.0.zip
 80111d90936204b58562e44994ec2e0b2c7ff296291d63a87aa3994b9130a1b4  gathering-map-markers-0.1.0.zip
 94e5317636ca8b8480a4be68c68830de434b9e4e332f0369c666270ba1ab7ad1  shared-guild-progression-0.1.0.zip

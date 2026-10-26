@@ -4,7 +4,7 @@ Mods for **Monster Hunter Freedom Unite** on the updated **Freedom Unbound launc
 Made by **DuduX42**. These releases support the USA version of the game (`ULUS10391`).
 
 Only the latest version of each mod is available here. Use the download links below
-or visit the [latest release page](https://github.com/Dudux42/FreedomUnboundmods/releases/tag/mods-2026-10-20).
+or visit the [latest release page](https://github.com/Dudux42/FreedomUnboundmods/releases/tag/mods-2026-10-25).
 The game and launcher are not included.
 
 ## Install
@@ -26,10 +26,10 @@ Each mod has a guide with more details if you need them.
 | [Monster Health Bars](#monster-hp) | 0.3.0 | [ZIP](https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/monster-health-bars-0.3.0.zip) | [Guide](guides/monster-hp.md) |
 | [Camera Unbound](#modern-camera) | 0.3.0 | [ZIP](https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/camera-unbound-0.3.0.zip) | [Guide](guides/modern-camera.md) |
 | [Key Quest Indicator](#key-quests) | 0.2.0 | [ZIP](https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/key-quest-indicator-0.2.0.zip) | [Guide](guides/key-quests.md) |
-| [Freedom Unbound HD](#fu-retextured) | 0.14.0 | [ZIP](https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/Freedom-Unbound-HD-0.14.0.zip) | [Guide](guides/fu-retextured.md) |
-| [Return Timer](#return-timer) | 0.2.0 | [ZIP](https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/return-timer-0.2.0.zip) | [Guide](guides/return-timer.md) |
+| [Freedom Unbound HD](#fu-retextured) | 0.14.1 | [ZIP](https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-25/Freedom-Unbound-HD-0.14.1.zip) | [Guide](guides/fu-retextured.md) |
+| [Return Timer](#return-timer) | 0.3.0 | [ZIP](https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-25/return-timer-0.3.0.zip) | [Guide](guides/return-timer.md) |
 | [Equipment Wishlist](#equipment-wishlist) | 0.2.0 | [ZIP](https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/equipment-wishlist-0.2.0.zip) | [Guide](guides/equipment-wishlist.md) |
-| [Controller Prompts](#controller-prompts) | 0.2.0 | [ZIP](https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/controller-prompts-0.2.0.zip) | [Guide](guides/controller-prompts.md) |
+| [Adaptive Button Prompts](#controller-prompts) | 0.4.0 | [ZIP](https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-25/adaptive-button-prompts-0.4.0.zip) | [Guide](guides/controller-prompts.md) |
 
 ## What each mod does
 
@@ -106,8 +106,8 @@ hunter and equipment textures. This is a work in progress, with more of the game
 being improved over time. Enable it as your texture pack in the Mods menu.
 Press **F10** during gameplay to switch between HD and original textures.
 
-Version **0.14.0** brings the item and equipment icons back to the original
-game artwork, upscaled 8x, and adds a new cloth texture.
+Version **0.14.1** adds 12 new 8x textures for effects, a map, icons, UI and skin
+tones, on top of 0.14.0's original-artwork item and equipment icons.
 [Coverage and installation details](guides/fu-retextured.md).
 
 **Planned updates**
@@ -146,14 +146,15 @@ required, and crafting the equipment removes its pin automatically.
 
 <a id="controller-prompts"></a>
 
-### Controller Prompts
+### Adaptive Button Prompts
 
-Changes supported on-screen button prompts to match your keyboard bindings or
+Formerly Controller Prompts. Changes supported on-screen button prompts to match your keyboard bindings or
 connected controller. It also shows the correct buttons for equipment pins and
 the target camera. Prompts switch as you use your keyboard or controller.
 
-The current button icons are placeholders. Some written instructions and tutorial
-images still show the original PSP buttons.
+Version **0.4.0** adds proper button art for Switch, PlayStation and Xbox
+controllers and raised keycaps for the keyboard. Some written instructions and
+tutorial images still show the original PSP buttons.
 
 **Planned updates**
 
@@ -175,7 +176,7 @@ the keyboard shortcuts in **Controls**. L/R shoulder buttons keep their usual fu
 - Target camera is included in **Camera Unbound**.
 - Continuous gathering is included in **Gathering Unbound**.
 - **Camera Unbound** integrates with **Monster Health Bars**, but also displays targets alone.
-- **Controller Prompts** improves the displayed bindings for both Camera Unbound and
+- **Adaptive Button Prompts** improves the displayed bindings for both Camera Unbound and
   Equipment Wishlist; their actions also work without it.
 
 ## More information

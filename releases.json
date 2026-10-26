@@ -1,5 +1,5 @@
 {
-    "release":  "mods-2026-10-20",
+    "release":  "mods-2026-10-25",
     "mods":  [
                  {
                      "id":  "damage-numbers",
@@ -54,21 +54,21 @@
                  {
                      "id":  "fu-retextured",
                      "name":  "Freedom Unbound HD",
-                     "version":  "0.14.0",
-                     "file":  "Freedom-Unbound-HD-0.14.0.zip",
-                     "bytes":  490865309,
-                     "sha256":  "97c646e19c08526cd70d5a5bed9e27fc0a4294516ea14c40c928b667e0121fac",
-                     "url":  "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/Freedom-Unbound-HD-0.14.0.zip",
+                     "version":  "0.14.1",
+                     "file":  "Freedom-Unbound-HD-0.14.1.zip",
+                     "bytes":  520545419,
+                     "sha256":  "3cc3d0c017a182ab724215e614c86982d14cba54eae99f297eec948d7b42ac32",
+                     "url":  "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-25/Freedom-Unbound-HD-0.14.1.zip",
                      "guide":  "guides/fu-retextured.md"
                  },
                  {
                      "id":  "return-timer",
                      "name":  "Return Timer",
-                     "version":  "0.2.0",
-                     "file":  "return-timer-0.2.0.zip",
-                     "bytes":  2318,
-                     "sha256":  "f6b47889dfee6d54cc25e6dac5607da2ab55b79d1cc7273f9da69b1bdb4ab985",
-                     "url":  "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/return-timer-0.2.0.zip",
+                     "version":  "0.3.0",
+                     "file":  "return-timer-0.3.0.zip",
+                     "bytes":  2364,
+                     "sha256":  "b351be794a5fc588b832dbde53f10b86003082f50de0fafa1564f0790c6b287f",
+                     "url":  "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-25/return-timer-0.3.0.zip",
                      "guide":  "guides/return-timer.md"
                  },
                  {
@@ -83,12 +83,12 @@
                  },
                  {
                      "id":  "controller-prompts",
-                     "name":  "Controller Prompts",
-                     "version":  "0.2.0",
-                     "file":  "controller-prompts-0.2.0.zip",
-                     "bytes":  2881,
-                     "sha256":  "596c6e8fd47832bf13fde51359b731ea67fd7c84139c285b9201efc01093696f",
-                     "url":  "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/controller-prompts-0.2.0.zip",
+                     "name":  "Adaptive Button Prompts",
+                     "version":  "0.4.0",
+                     "file":  "adaptive-button-prompts-0.4.0.zip",
+                     "bytes":  3026,
+                     "sha256":  "828a69a5ba3e67cbb8c5d5c2c216822ac9aadf4c977811bef979099c47c19976",
+                     "url":  "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-25/adaptive-button-prompts-0.4.0.zip",
                      "guide":  "guides/controller-prompts.md"
                  }
              ]

@@ -1,9 +1,9 @@
-# Controller Prompts 0.2.0
+# Adaptive Button Prompts 0.4.0
 
 Author: **DuduX42**. Game: MHFU USA (`ULUS10391`).
 
-Install `controller-prompts-0.2.0.zip` using the launcher's mod manager and enable
-Controller Prompts. Requires the updated Freedom Unbound native build.
+Install `adaptive-button-prompts-0.4.0.zip` using the launcher's mod manager and
+enable Adaptive Button Prompts. Requires the updated Freedom Unbound native build.
 
 Vanilla Circle, Cross, Triangle, Square, L/R, START/SELECT, analog-stick and
 D-pad sprites on the
@@ -27,8 +27,8 @@ The smithy's Equipment Material Pin controls use individual button caps:
 | Xbox / generic gamepad | LT | RT |
 | Keyboard defaults | F6 | F7 |
 
-Prompts follow the last input device used. Keyboard presses or mouse clicks
-select keyboard prompts; gamepad buttons or deliberate axis movement select
+Prompts follow the last input device used. Keyboard presses, mouse clicks or
+pointer movement select keyboard prompts; gamepad buttons or deliberate axis movement select
 gamepad prompts. Disconnecting the controller falls back to keyboard prompts.
 Connection alone does not override the last keyboard input. SDL identifies the
 controller exposed to the launcher: Steam Input or another translation layer
@@ -49,8 +49,11 @@ recognized sheets are supported. Literal written instructions such as "SELECT
 button", tutorial diagrams and artwork on other sheets are not rewritten.
 
 Implementation: `host/controller_prompts.*` exposes a shared UI-thread action
-label/drawing API and fills the existing wishlist control-hint provider. Original
-vector button caps use the launcher's green palette. Framework input adds two
+label/drawing API and fills the existing wishlist control-hint provider. Button
+art follows the detected controller: Switch face buttons use round letter caps,
+PlayStation face buttons use the Cross/Circle/Square/Triangle symbols, and Xbox
+face buttons use their colored A/B/X/Y labels. Keyboard bindings use raised,
+light keycaps with dark labels. Framework input adds two
 generic, configurable extra actions and merges them with physical triggers
 before dispatch, preserving edge-triggered pin/target actions and menu capture.
 Native replacement uses a generic profile draw-transform hook. Only verified

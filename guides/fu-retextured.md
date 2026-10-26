@@ -1,6 +1,6 @@
 # Freedom Unbound HD
 
-Version 0.14.0. Author: **DuduX42**.
+Version 0.14.1. Author: **DuduX42**.
 
 Install the mod ZIP from the launcher's Mods page and enable it. Use the updated
 native launcher for its built-in F10 control.
@@ -11,10 +11,10 @@ and its files stay in place, and your choice is saved for the next launch.
 Holding the key does not repeat the toggle. This shortcut is available during
 gameplay, outside launcher menus and dialogs; it has no separate F9 setting.
 
-This pack's official name is **Freedom Unbound HD**. Its internal ID remains
+This pack’s official name is **Freedom Unbound HD**. Its internal ID remains
 `fu-retextured`, so existing installations update in place.
 
-**0.14.0** restores the item and equipment icon atlases from the original game sheets with source-faithful 8x upscales; no Vector Icons artwork is included. It adds the pair 16 cloth atlas retexture.
+**0.14.1** adds 12 source-preserving 8x effect, map, icon, UI and skin-tone atlas mappings. The Vector Icons atlas remains excluded. **0.14.0** restores the item and equipment icon atlases from original game sheets and adds the pair 16 cloth atlas retexture.
 
 **0.13.3** adds the approved HD loading-map retexture, original-art 8x body
 and heading fonts, and the approved language-background upscale. The existing

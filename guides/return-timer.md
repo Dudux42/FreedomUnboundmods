@@ -1,17 +1,18 @@
-# Return Timer 0.2.0
+# Return Timer 0.3.0
 
 Author: DuduX42. Game: MHFU USA (`ULUS10391`) in the updated native launcher.
 
 ## Install and behavior
 
-Drop `return-timer-0.2.0.zip` onto the launcher's **Mods** page,
+Drop `return-timer-0.3.0.zip` onto the launcher's **Mods** page,
 install it and enable **Return Timer**. The desktop shortcut uses the
 rebuilt native executable; the configuration ZIP requires that provider.
 
 A compact top-center panel shows **RETURN IN** and the remaining time as
 `MM:SS` during the return countdown after a successful quest. The final ten
-seconds change to a warm red color. It sits below the top HUD, away from the bottom-left HP bars
-and the carving/item-notification area.
+seconds change to a warm red color. Its dark green patterned panel, copper
+trim, and rivet details match the game's HUD style. It sits below the top HUD,
+away from the bottom-left HP bars and the carving/item-notification area.
 
 It follows the game's actual return counter, including the native 20- and
 60-second durations. No host stopwatch advances it. The success announcement
