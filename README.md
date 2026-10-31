@@ -4,7 +4,7 @@ Mods for **Monster Hunter Freedom Unite** on the updated **Freedom Unbound launc
 Made by **DuduX42**. These releases support the USA version of the game (`ULUS10391`).
 
 Only the latest version of each mod is available here. Use the download links below
-or visit the [latest release page](https://github.com/Dudux42/FreedomUnboundmods/releases/tag/mods-2026-10-25).
+or visit the [latest release page](https://github.com/Dudux42/FreedomUnboundmods/releases/tag/mods-2026-10-31).
 The game and launcher are not included.
 
 ## Install
@@ -13,7 +13,7 @@ The game and launcher are not included.
 2. Open Freedom Unbound and drop the ZIP onto the **Mods** page.
 3. Install the mod and turn it on.
 
-Use Freedom Unbound **0.1.5** or newer. Enable only one texture pack at a time.
+Use Freedom Unbound **0.1.5** or newer. Weapon Upgrade Tree and Solo Guildhall Scaling need **0.1.6** or newer. Enable only one texture pack at a time.
 Several mods have settings: press **F9** in game, pick the mod and open **Options**.
 Each mod has a guide with more details if you need them.
 
@@ -30,6 +30,8 @@ Each mod has a guide with more details if you need them.
 | [Return Timer](#return-timer) | 0.3.0 | [ZIP](https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-25/return-timer-0.3.0.zip) | [Guide](guides/return-timer.md) |
 | [Equipment Wishlist](#equipment-wishlist) | 0.2.0 | [ZIP](https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-20/equipment-wishlist-0.2.0.zip) | [Guide](guides/equipment-wishlist.md) |
 | [Adaptive Button Prompts](#controller-prompts) | 0.4.0 | [ZIP](https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-25/adaptive-button-prompts-0.4.0.zip) | [Guide](guides/controller-prompts.md) |
+| [Weapon Upgrade Tree](#weapon-upgrade-tree) | 0.3.0 | [ZIP](https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-31/weapon-upgrade-tree-0.3.0.zip) | [Guide](guides/weapon-upgrade-tree.md) |
+| [Solo Guildhall Scaling](#solo-guildhall-scaling) | 0.1.0 | [ZIP](https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-31/solo-guildhall-scaling-0.1.0.zip) | [Guide](guides/solo-guildhall-scaling.md) |
 
 ## What each mod does
 
@@ -160,6 +162,30 @@ tutorial images still show the original PSP buttons.
 
 - Better button icons overall.
 
+<a id="weapon-upgrade-tree"></a>
+
+### Weapon Upgrade Tree
+
+Highlight a weapon at the smithy and press **F8** to open its upgrade chart.
+Follow the lines to see every upgrade path, including branches you haven't
+unlocked yet. Select a card to see its Power, element or status, sharpness and,
+for bows and bowguns, their shots, coatings and ammo in a side panel.
+
+A green check marks weapons already in your item box. A gold marker means it's
+the next upgrade from a weapon you own and you have the materials for it.
+Browsing the chart never crafts anything or spends materials. Press **F8**,
+Esc or Back to return to the smithy. Needs Freedom Unbound **0.1.6** or newer.
+
+<a id="solo-guildhall-scaling"></a>
+
+### Solo Guildhall Scaling
+
+Large monsters have **35% less HP** in ordinary Offline Gathering Hall quests,
+so the Hall is fairer when you hunt alone. Online Gathering Hall quests, Village
+quests and small monsters keep their normal HP, and damage, rewards and break
+thresholds are unchanged. Turn it on or off between quests, not during one.
+Needs Freedom Unbound **0.1.6** or newer.
+
 ## Controls and combinations
 
 | Mod action | Switch | Xbox | PlayStation | Keyboard default |
@@ -167,6 +193,7 @@ tutorial images still show the original PSP buttons.
 | Remove smithy pin / face selected target | ZL | LT | L2 | F6 |
 | Pin smithy recipe / cycle target | ZR | RT | R2 | F7 |
 | Open the Equipment Wishlist | | | | F7 |
+| Open the Weapon Upgrade Tree (at the smithy) | | | | F8 |
 | Switch HD and original textures | | | | F10 |
 | Mod options | | | | F9 |
 

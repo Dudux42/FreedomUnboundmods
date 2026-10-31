@@ -1,5 +1,5 @@
 {
-    "release":  "mods-2026-10-25",
+    "release":  "mods-2026-10-31",
     "mods":  [
                  {
                      "id":  "damage-numbers",
@@ -90,6 +90,26 @@
                      "sha256":  "828a69a5ba3e67cbb8c5d5c2c216822ac9aadf4c977811bef979099c47c19976",
                      "url":  "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-25/adaptive-button-prompts-0.4.0.zip",
                      "guide":  "guides/controller-prompts.md"
+                 },
+                 {
+                     "id":  "weapon-upgrade-tree",
+                     "name":  "Weapon Upgrade Tree",
+                     "version":  "0.3.0",
+                     "file":  "weapon-upgrade-tree-0.3.0.zip",
+                     "bytes":  4226,
+                     "sha256":  "bbec4a5889f9982529694595205a1b28369aa2bb7f592d885b9b37cefe018578",
+                     "url":  "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-31/weapon-upgrade-tree-0.3.0.zip",
+                     "guide":  "guides/weapon-upgrade-tree.md"
+                 },
+                 {
+                     "id":  "solo-guildhall-scaling",
+                     "name":  "Solo Guildhall Scaling",
+                     "version":  "0.1.0",
+                     "file":  "solo-guildhall-scaling-0.1.0.zip",
+                     "bytes":  1502,
+                     "sha256":  "9623ce2707ffde1f660ab41cac267b359feb81cd39bdd455a0743f0d39f2b306",
+                     "url":  "https://github.com/Dudux42/FreedomUnboundmods/releases/download/mods-2026-10-31/solo-guildhall-scaling-0.1.0.zip",
+                     "guide":  "guides/solo-guildhall-scaling.md"
                  }
              ]
 }
